@@ -3,7 +3,10 @@
 [![CI](https://github.com/makedirectory/cobol-to-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/makedirectory/cobol-to-rust/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
-![Status: experimental scaffold](https://img.shields.io/badge/status-experimental%20scaffold-orange)
+![Status: beta](https://img.shields.io/badge/status-beta-orange)
+
+> **Beta — in active development.** An experimental scaffold, not a full converter; interfaces and
+> supported subset will change. We'd love feedback — [open an issue](https://github.com/makedirectory/cobol-to-rust/issues).
 
 An educational, extensible COBOL-to-Rust transpiler scaffold.
 
