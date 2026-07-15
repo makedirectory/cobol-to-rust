@@ -1,5 +1,10 @@
 # COBOL to Rust Converter
 
+[![CI](https://github.com/makedirectory/cobol-to-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/makedirectory/cobol-to-rust/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![Status: experimental scaffold](https://img.shields.io/badge/status-experimental%20scaffold-orange)
+
 An educational, extensible COBOL-to-Rust transpiler scaffold.
 
 It supports a deliberately small COBOL subset so that every generated construct is understandable and testable. The project is structured to grow from regex parsing into a real lexer/parser, semantic model, and compatibility runtime.
@@ -67,3 +72,23 @@ The IR boundary is important: a serious converter should not translate text dire
 ## Scope warning
 
 A general-purpose COBOL-to-Rust converter is a major compiler and migration effort. COBOL semantics include decimal arithmetic, fixed-format source, record layouts, `REDEFINES`, file organizations, vendor dialects, CICS, embedded SQL, and decades of application-specific conventions. This repository is a credible starting point, not a claim of full automated conversion.
+
+## Roadmap & design
+
+See [`docs/ROADMAP.md`](docs/ROADMAP.md) and [`docs/SPEC.md`](docs/SPEC.md) (incl. the semantics-preservation policy).
+
+## Part of the COBOL Modernization Starters
+
+- **[cobol-rest-bridge](https://github.com/makedirectory/cobol-rest-bridge)** — expose COBOL through REST
+- **[cobol-migration-toolkit](https://github.com/makedirectory/cobol-migration-toolkit)** — inventory & dependency analysis
+- **[cobol-to-rust](https://github.com/makedirectory/cobol-to-rust)** — a COBOL-to-Rust transpiler scaffold (this repo)
+
+## Contributing
+
+Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). Report vulnerabilities per [SECURITY.md](SECURITY.md).
+
+## License & commercial support
+
+Licensed under the [Apache License 2.0](LICENSE). © 2026 Make Directory Developers, LLC.
+
+Evaluating COBOL-to-Rust or another target for a real migration? Make Directory Developers offers mainframe & COBOL modernization services — [mk-dir.com](https://mk-dir.com) · andrew@mk-dir.com.

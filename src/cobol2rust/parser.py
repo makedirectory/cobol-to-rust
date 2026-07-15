@@ -27,7 +27,7 @@ def rust_name(name: str) -> str:
 
 def parse_value(value: str | None, rust_type: str) -> str:
     if value is None:
-        return 'String::new()' if rust_type == "String" else "0"
+        return "String::new()" if rust_type == "String" else "0"
     value = value.strip().strip('"').strip("'")
     return f"{json.dumps(value)}.to_string()" if rust_type == "String" else value
 
@@ -46,7 +46,7 @@ def parse_program(text: str) -> Program:
     procedure = source.upper().split("PROCEDURE DIVISION.", 1)
     if len(procedure) != 2:
         raise ValueError("PROCEDURE DIVISION was not found")
-    body_original = source[source.upper().index("PROCEDURE DIVISION.") + len("PROCEDURE DIVISION."):]
+    body_original = source[source.upper().index("PROCEDURE DIVISION.") + len("PROCEDURE DIVISION.") :]
 
     statements: list[Statement] = []
     for raw in body_original.splitlines():

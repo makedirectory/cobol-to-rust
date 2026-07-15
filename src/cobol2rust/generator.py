@@ -41,7 +41,7 @@ def generate_main(program: Program) -> str:
             target, value = args
             lines.append(f"    {target} *= {expression(value)};")
         elif op == "display":
-            lines.append(f"    println!(\"{{}}\", {expression(args[0])});")
+            lines.append(f'    println!("{{}}", {expression(args[0])});')
         elif op == "unsupported":
             escaped = args[0].replace("*/", "* /")
             lines.append(f"    /* unsupported COBOL: {escaped} */")
@@ -55,6 +55,6 @@ def write_cargo_project(program: Program, output: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
     (output / "src").mkdir(exist_ok=True)
     package = program.name.lower().replace("_", "-")
-    cargo = f'''[package]\nname = "{package}"\nversion = "0.1.0"\nedition = "2021"\n\n[dependencies]\n'''
+    cargo = f"""[package]\nname = "{package}"\nversion = "0.1.0"\nedition = "2021"\n\n[dependencies]\n"""
     (output / "Cargo.toml").write_text(cargo, encoding="utf-8")
     (output / "src" / "main.rs").write_text(generate_main(program), encoding="utf-8")
