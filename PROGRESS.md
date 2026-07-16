@@ -3,7 +3,7 @@
 **Last updated:** 2026-07-15 · **Mode:** Clean-slate (beta) · **Latest:** v0.1
 
 > Exposure / "wow" project: a COBOL→Rust transpiler scaffold. For **how** we work, see the shared
-> **`PROCESS.md`** in the workspace root. **Legend:** ⬜ · 🔄 · ✅ · ⚠️ · —
+> **`PROCESS.md`** in the [cartograph-web docs handbook](https://github.com/makedirectory/cartograph-web/blob/main/apps/docs/docs/handbook/process.md). **Legend:** ⬜ · 🔄 · ✅ · ⚠️ · —
 
 ## Current snapshot
 
@@ -39,4 +39,4 @@ output. The credibility line for later is **differential testing** (run COBOL vs
 
 ---
 
-*Companion: shared `PROCESS.md` (workspace root).*
+*Companion: shared `PROCESS.md` (cartograph-web docs handbook).*
